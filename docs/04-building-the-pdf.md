@@ -49,8 +49,8 @@ Expected output:
 
 ```
 Checking word limits:
-  memo body (sections 1-6) :  2185   limit 2000-2500   OK
-  justification            :   483   limit 500 max        OK
+  memo body (sections 1-6) :  2421   limit 2000-2500   OK
+  justification            :   472   limit 500 max        OK
 
 Wrote build\memo.html
 Wrote submission\TeamName_TLsName.pdf  (137.1 KB)
@@ -91,6 +91,12 @@ It then strips markdown punctuation (`#`, `*`, `|`, backticks and so on) and
 counts anything left containing a letter or digit. The cover page, the section
 headings' markup and the recommendation table are excluded, so the number
 reflects prose the way a marker would count it.
+
+**One subtlety, and it matters.** Em and en dashes separate words; the ASCII
+hyphen does **not**. A marker (and Microsoft Word) counts "price-to-book" as one
+word, not three. An earlier version of this script stripped hyphens along with
+the other punctuation, which split 38 compounds in the memo and over-reported
+the body by roughly 2%. If you edit the regex, keep the hyphen out of it.
 
 > If you rename a heading in `memo.md`, update the markers in this file or the
 > count will fail.

@@ -121,11 +121,11 @@ check behaves like a normal business. The part we cannot, does not.
 This one is counter-intuitive, so read it twice.
 
 At roughly ₹80,000 per 10 grams, FY25's ₹4,23,099 crore of revenue works out to
-about **530 tonnes of gold**. Against world gold supply of roughly 4,800 tonnes
+about **530 tonnes of gold value**. Against world gold supply of roughly 4,800 tonnes
 a year, that is large but genuinely possible for a major refinery — so it does
 **not** prove anything is wrong. We say so plainly in the memo.
 
-But here is the thing: *if* 530 tonnes really moved, then vault receipts, purity
+But here is the thing: *if* 530 tonnes of metal really moved, then vault receipts, purity
 certificates, shipping papers, insurance documents and matching bank transfers
 exist in enormous quantity, held by outside parties in several countries. Half a
 thousand tonnes of gold cannot be moved quietly. **The paperwork is not optional —
@@ -222,8 +222,8 @@ Current status:
 
 | Check | State |
 |---|---|
-| Memo body word count | 2,185 — within the 2,000–2,500 limit |
-| Justification word count | 483 — within the 500 limit |
+| Memo body word count | 2421 — within the 2,000–2,500 limit (2421/2500, 79 to spare) |
+| Justification word count | 472 — within the 500 limit |
 | All six required sections present | Yes |
 | One option ticked in the recommendation box | Yes — Option D |
 | Page 1 team details | **Placeholders — still to fill in** |

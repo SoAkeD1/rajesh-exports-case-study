@@ -19,7 +19,10 @@ BODY_LO, BODY_HI, JUST_MAX = 2000, 2500, 500
 def count(text):
     """Word count, ignoring markdown punctuation and HTML scaffolding."""
     text = re.sub(r"<div[^>]*></div>", " ", text)
-    text = re.sub(r"[#*_|`>-]", " ", text)
+    text = re.sub(r"[#*_|`>]", " ", text)
+    # em/en dashes separate words; the ASCII hyphen does NOT -- "price-to-book"
+    # is one word to a marker, and stripping it inflated the count by ~2%.
+    text = text.replace("—", " ").replace("–", " ")
     return len([w for w in text.split() if any(c.isalnum() for c in w)])
 
 

@@ -128,8 +128,8 @@ Sensitivity, because the gold price assumption is doing real work here:
 | ₹80,000 / 10g | 800 | ~529 |
 | ₹90,000 / 10g | 900 | ~470 |
 
-Against world annual gold supply of roughly 4,800 tonnes, that is about
-**10–12%** of global supply.
+Against world annual gold supply of roughly 4,800 tonnes, that is roughly
+**10–13%** of global supply.
 
 **The wrong conclusion:** "that is impossible, therefore the revenue is fake."
 It is *not* impossible. Valcambi is one of the world's largest refineries and
