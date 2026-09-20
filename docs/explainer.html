@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Whole Thing, Explained Simply</title>
+<style>
+  @page { size: A4; margin: 14mm 15mm 12mm 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 11.5pt; line-height: 1.6; color: #1c1c1c; margin: 0;
+  }
+  h1 { font-size: 26pt; margin: 0 0 4pt; letter-spacing: -0.5pt; }
+  h2 {
+    font-size: 15pt; margin: 0 0 10pt; padding-bottom: 5pt; color: #5d4c18;
+    border-bottom: 2pt solid #7a6320; page-break-after: avoid;
+  }
+  h3 { font-size: 12.5pt; margin: 13pt 0 5pt; color: #5d4c18; page-break-after: avoid; }
+  p { margin: 0 0 8pt; }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+  .lead { font-size: 12.5pt; line-height: 1.45; color: #444; margin-bottom: 8pt; }
+
+  .step {
+    display: inline-block; width: 22pt; height: 22pt; border-radius: 50%;
+    background: #5d4c18; color: #fff; text-align: center; line-height: 22pt;
+    font-weight: bold; font-size: 11pt; margin-right: 6pt;
+  }
+  .box {
+    border: 1pt solid #d8d3c4; background: #faf8f3; padding: 8pt 12pt;
+    margin: 8pt 0; page-break-inside: avoid;
+  }
+  .box.plain { background: #fff; }
+  .box.key { border-left: 4pt solid #7a6320; background: #f5f2e9; }
+  .box.warn { border-left: 4pt solid #a23b28; background: #fbf3f1; }
+  .box h4 { margin: 0 0 5pt; font-size: 11pt; color: #5d4c18; }
+  .box.warn h4 { color: #a23b28; }
+
+  table { width: 100%; border-collapse: collapse; margin: 9pt 0; font-size: 10.5pt;
+          page-break-inside: avoid; }
+  th { background: #f5f2e9; border-bottom: 1pt solid #b9a96f; padding: 5pt 8pt;
+       text-align: left; }
+  td { border-bottom: 0.5pt solid #e2ded2; padding: 5pt 8pt; vertical-align: top; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  figure { margin: 9pt 0; page-break-inside: avoid; text-align: center; }
+  figcaption { font-size: 9.5pt; color: #6b6b6b; margin-top: 5pt; font-style: italic; }
+  svg { max-width: 100%; height: auto; }
+
+  .cover { text-align: center; padding-top: 55mm; }
+  .cover .sub { font-size: 14pt; color: #5d4c18; margin-top: 8pt; }
+  .cover .rule { width: 90pt; height: 3pt; background: #7a6320; margin: 18pt auto; }
+  .cover .note { font-size: 11pt; color: #555; max-width: 350pt; margin: 0 auto; }
+
+  ul, ol { margin: 0 0 9pt; padding-left: 18pt; }
+  li { margin-bottom: 6pt; }
+  .tick { color: #2d6a3e; font-weight: bold; }
+  .cross { color: #a23b28; font-weight: bold; }
+  strong { font-weight: 700; }
+  .big-num { font-size: 20pt; font-weight: bold; color: #5d4c18; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="page cover">
+  <h1>The Whole Thing,<br>Explained Simply</h1>
+  <div class="rule"></div>
+  <div class="sub">What the competition is, what the problem was,<br>and what we answered</div>
+  <p style="margin-top:40pt"><strong>Team Inferno</strong> &nbsp;·&nbsp; Round 2 Case Study</p>
+  <div class="box plain" style="max-width:360pt;margin:40pt auto;text-align:left">
+    <h4>Who this is for</h4>
+    <p style="margin:0">Someone who knows <strong>nothing</strong> about finance, nothing about
+    this competition, and has not read the problem. Everything is explained from
+    zero. Read it slowly. Nothing here assumes you already know anything.</p>
+  </div>
+</div>
+
+<!-- ============ 1. WHAT IS GOING ON ============ -->
+<div class="page">
+  <h2>1. What is going on here?</h2>
+  <p class="lead">There is a competition. It gave us a made-up business problem.
+  We had to decide what to do and write our answer down. That written answer is
+  what this whole folder is about.</p>
+
+  <p>That is genuinely all of it. The rest of this document just fills in the detail.</p>
+
+  <h3>The competition has three rounds</h3>
+
+  <figure>
+    <svg viewBox="0 0 660 190" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3"
+                orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#7a6320"/></marker>
+      </defs>
+      <rect x="4" y="38" width="180" height="86" rx="5" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="94" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#5d4c18">Round 1</text>
+      <text x="94" y="82" text-anchor="middle" font-size="12" fill="#333">An online quiz</text>
+      <text x="94" y="100" text-anchor="middle" font-size="11" fill="#666">30 minutes</text>
+      <text x="94" y="116" text-anchor="middle" font-size="11" fill="#666">Top teams go through</text>
+
+      <line x1="190" y1="81" x2="232" y2="81" stroke="#7a6320" stroke-width="2" marker-end="url(#ar)"/>
+
+      <rect x="240" y="20" width="180" height="122" rx="5" fill="#7a6320" stroke="#5d4c18"/>
+      <text x="330" y="46" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Round 2</text>
+      <text x="330" y="66" text-anchor="middle" font-size="12" fill="#fff">Write a case study</text>
+      <text x="330" y="86" text-anchor="middle" font-size="11" fill="#f0e6c8">Hand in one PDF</text>
+      <text x="330" y="103" text-anchor="middle" font-size="11" fill="#f0e6c8">Due 30 September</text>
+      <text x="330" y="128" text-anchor="middle" font-size="11" font-style="italic" fill="#fff">← we are here</text>
+
+      <line x1="426" y1="81" x2="468" y2="81" stroke="#7a6320" stroke-width="2" marker-end="url(#ar)"/>
+
+      <rect x="476" y="38" width="180" height="86" rx="5" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="566" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#5d4c18">Round 3</text>
+      <text x="566" y="82" text-anchor="middle" font-size="12" fill="#333">Present to judges</text>
+      <text x="566" y="100" text-anchor="middle" font-size="11" fill="#666">Live, at IIT Bhubaneswar</text>
+      <text x="566" y="116" text-anchor="middle" font-size="11" fill="#666">A brand new problem</text>
+    </svg>
+    <figcaption>Round 3 gives you a different problem, so this answer is only used for Round 2.</figcaption>
+  </figure>
+
+  <h3>The rules that matter</h3>
+  <table>
+    <tr><th>Rule</th><th>What it means</th></tr>
+    <tr><td>Teams of 2 to 4</td><td>You cannot enter alone. Members can be from different colleges.</td></tr>
+    <tr><td>Hand in one PDF</td><td>Not Word, not a link. One file.</td></tr>
+    <tr><td>Name the file <em>TeamName_LeaderName</em></td><td>Ours is <strong>Inferno_Mahi.pdf</strong></td></tr>
+    <tr><td>Page 1 = who you are</td><td>Every member's name, college, email, phone.</td></tr>
+    <tr><td>2,000–2,500 words</td><td>A hard limit. Too few or too many and you are breaking the rules.</td></tr>
+    <tr><td>Plus a 500-word summary</td><td>A separate short piece at the end.</td></tr>
+    <tr><td>Deadline 30 Sept, 11:59 PM</td><td>Late = rejected. No exceptions are made.</td></tr>
+  </table>
+
+  <div class="box warn">
+    <h4>The one that gets people disqualified</h4>
+    <p style="margin:0">Copying. If you copy from anywhere, or reuse something you
+    submitted before, you are out. Everything must be written fresh for this
+    competition, and anything you quote must be credited.</p>
+  </div>
+</div>
+
+<!-- ============ 2. WORDS ============ -->
+<div class="page">
+  <h2>2. Six words you need before anything else</h2>
+  <p class="lead">You cannot follow the problem without these. Each one has a
+  tiny example so it sticks.</p>
+
+  <div class="box">
+    <h4>1. Revenue — money coming IN from sales</h4>
+    <p style="margin:0">You run a juice stall. You sell 100 glasses at ₹10 each.
+    Your <strong>revenue is ₹1,000</strong>. Notice this says nothing about whether
+    you made money.</p>
+  </div>
+
+  <div class="box">
+    <h4>2. Profit — what is LEFT after you pay for everything</h4>
+    <p style="margin:0">Those 100 glasses cost you ₹900 in oranges, ice and cups.
+    Revenue ₹1,000, costs ₹900, so your <strong>profit is ₹100</strong>.</p>
+  </div>
+
+  <div class="box">
+    <h4>3. Margin — profit as a percentage of revenue</h4>
+    <p style="margin:0">₹100 profit on ₹1,000 revenue = a <strong>10% margin</strong>.
+    Now imagine you only kept ₹0.20 out of that ₹1,000. That is a <strong>0.02%
+    margin</strong> — and that is the number this whole case turns on. Remember it.</p>
+  </div>
+
+  <div class="box">
+    <h4>4. Subsidiary — a company owned by another company</h4>
+    <p style="margin:0">Your juice stall company buys an orange farm. The farm is
+    now your <strong>subsidiary</strong>. You own it.</p>
+  </div>
+
+  <div class="box">
+    <h4>5. Standalone vs consolidated — the single shop, or the whole family</h4>
+    <p style="margin:0"><strong>Standalone</strong> = just the juice stall's own numbers.
+    <strong>Consolidated</strong> = the juice stall <em>plus</em> the orange farm
+    <em>plus</em> anything else you own, all added into one big number.</p>
+  </div>
+
+  <div class="box">
+    <h4>6. Audited — checked by an outsider</h4>
+    <p style="margin:0">Anyone can type a number into a spreadsheet. <strong>Audited</strong>
+    means an independent accounting firm examined the records and signed their name
+    to say the numbers are real. Audited numbers can be trusted. Unaudited numbers
+    are just a claim.</p>
+  </div>
+
+  <div class="box key">
+    <h4>If you only remember one thing from this page</h4>
+    <p style="margin:0">A company can have <strong>enormous revenue and almost no
+    profit</strong> at the same time. That is not automatically suspicious — and
+    understanding why is the whole puzzle.</p>
+  </div>
+</div>
+
+<!-- ============ 3. THE PROBLEM ============ -->
+<div class="page">
+  <h2>3. The problem we were given</h2>
+
+  <p class="lead">You are given a role to play. You are an analyst at an investment
+  fund. The fund owns shares in a gold company. Something has gone wrong, and your
+  boss wants your recommendation today.</p>
+
+  <table>
+    <tr><th>Who you are</th><td>A research analyst at <strong>Aarohan Capital</strong>, a
+      made-up investment fund that manages ₹4,500 crore of other people's money.</td></tr>
+    <tr><th>What you own</th><td>A small amount of shares in <strong>Rajesh Exports</strong>,
+      a gold company.</td></tr>
+    <tr><th>What went wrong</th><td>The government's market regulator says it is not
+      satisfied the company's sales figures are real, and has started an investigation.</td></tr>
+    <tr><th>Your job</th><td>Tell your boss what to do with the shares, and explain why.</td></tr>
+  </table>
+
+  <h3>Now here is the actual problem, using a shop</h3>
+  <p>Forget gold for a minute. Imagine a corner shop.</p>
+
+  <figure>
+    <svg viewBox="0 0 660 250" xmlns="http://www.w3.org/2000/svg">
+      <text x="10" y="22" font-size="12.5" font-weight="bold" fill="#5d4c18">What the shop SAYS it sold</text>
+      <rect x="10" y="32" width="640" height="46" fill="#7a6320" rx="3"/>
+      <text x="330" y="61" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">₹1,00,00,000  (one crore)</text>
+
+      <text x="10" y="112" font-size="12.5" font-weight="bold" fill="#a23b28">The receipts it can actually show you</text>
+      <rect x="10" y="122" width="640" height="46" fill="#f2ece0" rx="3" stroke="#d8d3c4"/>
+      <rect x="10" y="122" width="1.3" height="46" fill="#a23b28"/>
+      <text x="24" y="151" font-size="13" font-weight="bold" fill="#a23b28">₹20,000</text>
+      <text x="120" y="151" font-size="11.5" fill="#777">← that thin red line is the whole of it</text>
+
+      <rect x="10" y="190" width="640" height="52" rx="4" fill="#faf8f3" stroke="#d8d3c4"/>
+      <text x="24" y="211" font-size="11.5" fill="#333">The shop replies: &#8220;You have misunderstood. Those receipts only record my</text>
+      <text x="24" y="230" font-size="11.5" fill="#333">profit on each sale, not the full value of what passed through the shop.&#8221;</text>
+    </svg>
+    <figcaption>The gap is about 500 times. The shop's explanation might genuinely be true.</figcaption>
+  </figure>
+
+  <p>So you say: <em>fine — then show me your sales book, your supplier bills, and
+  your bank statements.</em></p>
+
+  <p><strong>And the shop does not show you.</strong></p>
+
+  <div class="box key">
+    <h4>That is the entire case</h4>
+    <p style="margin:0">A huge claimed number. A tiny checkable number. A reasonable
+    explanation for the gap. And then no paperwork to back the explanation up.
+    Everything from here is just this same shape, with much bigger numbers.</p>
+  </div>
+</div>
+
+<!-- ============ 4. THE COMPANY ============ -->
+<div class="page">
+  <h2>4. The company, and why its shape matters</h2>
+
+  <p class="lead">Rajesh Exports is an Indian company that deals in gold. But it owns
+  other companies in other countries, and that is where nearly all the money
+  supposedly is.</p>
+
+  <figure>
+    <svg viewBox="0 0 660 300" xmlns="http://www.w3.org/2000/svg">
+      <rect x="215" y="8" width="230" height="56" rx="5" fill="#7a6320"/>
+      <text x="330" y="30" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#fff">Rajesh Exports Limited</text>
+      <text x="330" y="47" text-anchor="middle" font-size="11" fill="#f0e6c8">India · the listed parent</text>
+      <text x="330" y="59" text-anchor="middle" font-size="10" fill="#f0e6c8">only 1.66% of the money is here</text>
+
+      <line x1="330" y1="64" x2="330" y2="86" stroke="#b9a96f" stroke-width="1.5"/>
+      <line x1="140" y1="86" x2="540" y2="86" stroke="#b9a96f" stroke-width="1.5"/>
+      <line x1="140" y1="86" x2="140" y2="104" stroke="#b9a96f" stroke-width="1.5"/>
+      <line x1="330" y1="86" x2="330" y2="104" stroke="#b9a96f" stroke-width="1.5"/>
+      <line x1="540" y1="86" x2="540" y2="104" stroke="#b9a96f" stroke-width="1.5"/>
+
+      <rect x="48" y="104" width="184" height="52" rx="5" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="140" y="124" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#5d4c18">REL Singapore</text>
+      <text x="140" y="141" text-anchor="middle" font-size="10.5" fill="#666">Does it really do anything?</text>
+
+      <rect x="238" y="104" width="184" height="52" rx="5" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="330" y="121" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#5d4c18">Global Gold Refineries</text>
+      <text x="330" y="136" text-anchor="middle" font-size="10.5" fill="#666">Switzerland · a holding company</text>
+      <text x="330" y="150" text-anchor="middle" font-size="10.5" fill="#a23b28">huge money booked HERE</text>
+
+      <rect x="448" y="104" width="184" height="52" rx="5" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="540" y="124" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#5d4c18">ACC Energy Storage</text>
+      <text x="540" y="141" text-anchor="middle" font-size="10.5" fill="#666">Batteries. Unrelated.</text>
+
+      <line x1="330" y1="156" x2="330" y2="182" stroke="#b9a96f" stroke-width="1.5"/>
+      <rect x="238" y="182" width="184" height="56" rx="5" fill="#fff" stroke="#a23b28" stroke-width="1.5"/>
+      <text x="330" y="202" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#a23b28">Valcambi SA</text>
+      <text x="330" y="218" text-anchor="middle" font-size="10.5" fill="#666">Switzerland · a REAL gold refinery</text>
+      <text x="330" y="232" text-anchor="middle" font-size="10.5" fill="#666">this is the one we can check</text>
+
+      <rect x="10" y="256" width="640" height="38" rx="4" fill="#fbf3f1" stroke="#e0c4bd"/>
+      <text x="24" y="273" font-size="11" fill="#333">A <tspan font-weight="bold">holding company</tspan> does not make or sell anything. It only owns other companies.</text>
+      <text x="24" y="288" font-size="11" fill="#333">So money appearing at one, instead of at the refinery below it, is odd.</text>
+    </svg>
+    <figcaption>The Indian company at the top is tiny. Almost everything sits in the boxes below it.</figcaption>
+  </figure>
+
+  <h3>How lopsided is it?</h3>
+  <p>In the most recent year the group said it took in <strong>₹4,23,099 crore</strong>.
+  Of that, only <strong>₹7,027 crore</strong> came from the Indian company that
+  Indian rules let us inspect. Everything else — <strong>98.34%</strong> — came from
+  the overseas companies.</p>
+
+  <figure>
+    <svg viewBox="0 0 660 84" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="16" width="640" height="40" fill="#7a6320" rx="3"/>
+      <rect x="10" y="16" width="10.6" height="40" fill="#2d6a3e" rx="1"/>
+      <text x="360" y="41" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#fff">98.34% — overseas, cannot be inspected</text>
+      <text x="26" y="74" font-size="11" fill="#2d6a3e">↑ that sliver on the left is the 1.66% we can actually check</text>
+    </svg>
+  </figure>
+
+  <div class="box key">
+    <p style="margin:0">So when someone asks <em>&#8220;can we trust this company's
+    numbers?&#8221;</em>, they are really asking about that big gold block — the part
+    nobody outside the company has ever been allowed to look at.</p>
+  </div>
+</div>
+
+<!-- ============ 5. THE ARGUMENT ============ -->
+<div class="page">
+  <h2>5. The argument, from both sides</h2>
+
+  <p class="lead">Before our answer, you need to understand why this is genuinely
+  hard — and why the company's defence is not stupid.</p>
+
+  <h3>The company's defence (and it is a good one)</h3>
+
+  <p>Gold refining works differently from a normal business. A refinery takes in
+  gold, melts it, purifies it, and sells it on. The gold is worth a fortune, but
+  the refinery only keeps a tiny fee.</p>
+
+  <div class="box">
+    <h4>Think of a money-changer at the airport</h4>
+    <p style="margin:0">Someone hands over ₹1,00,000 to change into dollars. The
+    money-changer keeps ₹200 as a fee. Did the money-changer &#8220;earn&#8221;
+    ₹1,00,000 or ₹200? Depending on how you write the books, <strong>both answers
+    can be correct</strong>. That is exactly the dispute here.</p>
+  </div>
+
+  <p>So the company says: the regulator is comparing our <em>fee</em> figure with our
+  <em>total value passing through</em> figure. Of course one is 500 times the other.
+  Nothing is missing.</p>
+
+  <p><strong>This could be true.</strong> Our answer says so openly. A good argument
+  has to beat the other side at its strongest, not at its weakest.</p>
+
+  <h3>Why we did not accept it — three reasons</h3>
+
+  <h3 style="margin-top:14pt">Reason 1 — the two numbers move in opposite directions</h3>
+  <p>If the big number really comes from the refinery's work, then when the refinery
+  gets busier, both numbers should rise together. They do not.</p>
+
+  <figure>
+    <svg viewBox="0 0 660 210" xmlns="http://www.w3.org/2000/svg">
+      <line x1="60" y1="170" x2="620" y2="170" stroke="#ccc"/>
+      <line x1="60" y1="20" x2="60" y2="170" stroke="#ccc"/>
+      <text x="62" y="16" font-size="10" fill="#888">higher</text>
+      <text x="90" y="186" font-size="10.5" fill="#666">FY21</text>
+      <text x="580" y="186" font-size="10.5" fill="#666">FY25</text>
+
+      <polyline points="100,120 230,128 360,72 490,100 600,40" fill="none" stroke="#7a6320" stroke-width="3"/>
+      <circle cx="100" cy="120" r="4" fill="#7a6320"/><circle cx="600" cy="40" r="4" fill="#7a6320"/>
+      <text x="600" y="30" text-anchor="end" font-size="11" font-weight="bold" fill="#7a6320">UP 62%</text>
+      <text x="108" y="114" font-size="10.5" fill="#7a6320">what the group CLAIMS from overseas</text>
+
+      <polyline points="100,138 230,128 360,126 490,145 600,156" fill="none" stroke="#a23b28" stroke-width="3"/>
+      <circle cx="100" cy="138" r="4" fill="#a23b28"/><circle cx="600" cy="156" r="4" fill="#a23b28"/>
+      <text x="600" y="172" text-anchor="end" font-size="11" font-weight="bold" fill="#a23b28">DOWN 27%</text>
+      <text x="108" y="154" font-size="10.5" fill="#a23b28">what the refinery's CHECKED accounts show</text>
+    </svg>
+    <figcaption>One line climbs, the other sinks. The money-changer explanation cannot produce that.</figcaption>
+  </figure>
+
+  <p>The fee explanation can make one number bigger than the other. It cannot make
+  them travel in <em>opposite directions</em>, because a fee is always a slice of the
+  total. If the total grew, the fee should have grown too.</p>
+
+  <div class="box">
+    <h4>The fair objection — and our answer</h4>
+    <p>Someone sharp will say: <em>the top line covers ALL the overseas companies,
+    the bottom line covers only Valcambi. Maybe the work just moved to a different
+    company in the group.</em> That is a fair point and we say so in the memo.</p>
+    <p style="margin:0">But it costs them. If the work moved, it moved to companies
+    that <strong>have no gold refinery at all</strong> — which makes things worse, not
+    better. And it would be settled in one page: a simple breakdown of which company
+    earned what. That breakdown has never been produced.</p>
+  </div>
+</div>
+
+<!-- ============ 6. REASONS 2 AND 3 ============ -->
+<div class="page">
+  <h3>Reason 2 — they sold more but earned almost nothing</h3>
+
+  <p>A real trading business earns a thin but <em>steady</em> slice. Sell twice as
+  much, earn roughly twice as much. Here, sales went up and profit nearly vanished.</p>
+
+  <figure>
+    <svg viewBox="0 0 660 200" xmlns="http://www.w3.org/2000/svg">
+      <text x="60" y="18" font-size="11.5" font-weight="bold" fill="#5d4c18">Sales (revenue)</text>
+      <rect x="60" y="28" width="180" height="34" fill="#d9cfa8" rx="3"/>
+      <text x="250" y="50" font-size="11" fill="#666">FY23 — ₹3,39,690 cr</text>
+      <rect x="60" y="70" width="224" height="34" fill="#7a6320" rx="3"/>
+      <text x="294" y="92" font-size="11" fill="#333">FY25 — ₹4,23,099 cr &nbsp;<tspan font-weight="bold" fill="#2d6a3e">up 24.6%</tspan></text>
+
+      <text x="60" y="136" font-size="11.5" font-weight="bold" fill="#a23b28">Profit</text>
+      <rect x="60" y="146" width="180" height="20" fill="#e0b5ac" rx="2"/>
+      <text x="250" y="161" font-size="11" fill="#666">FY23 — ₹1,432 cr</text>
+      <rect x="60" y="172" width="12" height="20" fill="#a23b28" rx="2"/>
+      <text x="82" y="187" font-size="11" fill="#333">FY25 — ₹95 cr &nbsp;<tspan font-weight="bold" fill="#a23b28">down 93.4%</tspan></text>
+    </svg>
+    <figcaption>Sales grew by a quarter. Profit fell by almost everything.</figcaption>
+  </figure>
+
+  <p>There is a sharper version. Compare the part we <em>can</em> inspect with the
+  part we <em>cannot</em>:</p>
+
+  <table>
+    <tr><th>In the most recent year</th><th class="num">Revenue</th><th class="num">Profit</th><th class="num">Margin</th></tr>
+    <tr><td>The Indian company — <strong>audited, inspectable</strong></td>
+        <td class="num">₹7,027 cr</td><td class="num">₹24 cr</td><td class="num"><strong>0.34%</strong></td></tr>
+    <tr><td>The overseas companies — <strong>nobody can inspect</strong></td>
+        <td class="num">₹4,16,072 cr</td><td class="num">₹71 cr</td><td class="num"><strong>0.017%</strong></td></tr>
+  </table>
+
+  <p>The visible part earns <strong>twenty times better</strong> than the invisible part.
+  The bit we can check behaves like a normal business. The bit we cannot check
+  does not.</p>
+
+  <div class="box">
+    <h4>The fair objection — and our answer</h4>
+    <p style="margin:0">Gold prices swing, so maybe they lost money on stock they were
+    holding, or on a bad bet, or took a one-off write-off. All possible. But each of
+    those would show up as <strong>one bad year</strong>, a single visible hit — not
+    as a smooth two-year slide from 0.42% to 0.12% to 0.02%. And none has been
+    disclosed.</p>
+  </div>
+
+  <h3>Reason 3 — gold that heavy cannot move quietly</h3>
+  <p>This is our strongest point and it works backwards from what you would expect.
+  Read it twice.</p>
+
+  <figure>
+    <svg viewBox="0 0 660 200" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="3"
+              orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#7a6320"/></marker></defs>
+      <rect x="6" y="46" width="150" height="66" rx="5" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="81" y="70" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#5d4c18">₹4,23,099 cr</text>
+      <text x="81" y="88" text-anchor="middle" font-size="11" fill="#555">of gold value</text>
+      <text x="81" y="104" text-anchor="middle" font-size="11" fill="#555">= about 530 tonnes</text>
+
+      <line x1="162" y1="79" x2="198" y2="79" stroke="#7a6320" stroke-width="2" marker-end="url(#ar2)"/>
+
+      <rect x="206" y="30" width="190" height="98" rx="5" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="301" y="52" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#5d4c18">which MUST create</text>
+      <text x="301" y="72" text-anchor="middle" font-size="10.5" fill="#555">vault receipts · purity certificates</text>
+      <text x="301" y="88" text-anchor="middle" font-size="10.5" fill="#555">shipping papers · insurance</text>
+      <text x="301" y="104" text-anchor="middle" font-size="10.5" fill="#555">invoices · bank transfers</text>
+      <text x="301" y="120" text-anchor="middle" font-size="10.5" font-style="italic" fill="#666">held by OUTSIDE parties</text>
+
+      <line x1="402" y1="79" x2="438" y2="79" stroke="#7a6320" stroke-width="2" marker-end="url(#ar2)"/>
+
+      <rect x="446" y="46" width="206" height="66" rx="5" fill="#fbf3f1" stroke="#a23b28" stroke-width="1.5"/>
+      <text x="549" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#a23b28">None of it produced</text>
+      <text x="549" y="93" text-anchor="middle" font-size="11" fill="#666">asked for repeatedly</text>
+
+      <text x="330" y="168" text-anchor="middle" font-size="11.5" fill="#333">530 tonnes is about a tenth of all the gold mined on Earth in a year.</text>
+      <text x="330" y="186" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#5d4c18">You cannot move that much metal without leaving a paper trail.</text>
+    </svg>
+  </figure>
+
+  <div class="box key">
+    <h4>Why this is clever, in one sentence</h4>
+    <p style="margin:0">We do <strong>not</strong> say the amount is too big to be real —
+    it isn't, and saying so would be easy to attack. We say the opposite: if it
+    <em>is</em> real, then mountains of paperwork must exist, much of it held by other
+    companies in other countries. So the missing paperwork is <em>more</em> damning,
+    not less.</p>
+  </div>
+
+  <div class="box">
+    <h4>The fair objection — and our answer</h4>
+    <p style="margin:0">&#8220;Those records are confidential, they name our customers.&#8221;
+    True, but it does not work. A reconciliation statement and an auditor's sign-off
+    name <strong>nobody at all</strong>, and documents can be handed to a regulator
+    privately, under seal. Confidentiality explains why records are not <em>published</em>.
+    It does not explain why they were not <em>handed over</em>.</p>
+  </div>
+</div>
+
+<!-- ============ 7. THE DECISION ============ -->
+<div class="page">
+  <h2>6. What we decided</h2>
+
+  <p class="lead">There were four allowed answers. We had to pick exactly one.</p>
+
+  <figure>
+    <svg viewBox="0 0 660 210" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="10" width="155" height="86" rx="5" fill="#fff" stroke="#d8d3c4"/>
+      <text x="83" y="32" text-anchor="middle" font-size="12" font-weight="bold" fill="#999">A</text>
+      <text x="83" y="52" text-anchor="middle" font-size="11" fill="#777">Buy more</text>
+      <text x="83" y="70" text-anchor="middle" font-size="10" fill="#999">&#8220;the market</text>
+      <text x="83" y="84" text-anchor="middle" font-size="10" fill="#999">overreacted&#8221;</text>
+
+      <rect x="171" y="10" width="155" height="86" rx="5" fill="#fff" stroke="#d8d3c4"/>
+      <text x="248" y="32" text-anchor="middle" font-size="12" font-weight="bold" fill="#999">B</text>
+      <text x="248" y="52" text-anchor="middle" font-size="11" fill="#777">Hold and wait</text>
+      <text x="248" y="70" text-anchor="middle" font-size="10" fill="#999">&#8220;see what the</text>
+      <text x="248" y="84" text-anchor="middle" font-size="10" fill="#999">investigation finds&#8221;</text>
+
+      <rect x="336" y="10" width="155" height="86" rx="5" fill="#fff" stroke="#d8d3c4"/>
+      <text x="413" y="32" text-anchor="middle" font-size="12" font-weight="bold" fill="#999">C</text>
+      <text x="413" y="52" text-anchor="middle" font-size="11" fill="#777">Sell</text>
+      <text x="413" y="70" text-anchor="middle" font-size="10" fill="#999">&#8220;too risky</text>
+      <text x="413" y="84" text-anchor="middle" font-size="10" fill="#999">to keep&#8221;</text>
+
+      <rect x="501" y="4" width="155" height="98" rx="5" fill="#7a6320" stroke="#5d4c18" stroke-width="2"/>
+      <text x="578" y="28" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">D  ← ours</text>
+      <text x="578" y="50" text-anchor="middle" font-size="11" fill="#fff">Sell, AND refuse</text>
+      <text x="578" y="66" text-anchor="middle" font-size="11" fill="#fff">to look at it again</text>
+      <text x="578" y="86" text-anchor="middle" font-size="10" fill="#f0e6c8">until it can be checked</text>
+
+      <rect x="6" y="122" width="650" height="80" rx="5" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="22" y="146" font-size="12" font-weight="bold" fill="#5d4c18">Why D and not C — the difference matters</text>
+      <text x="22" y="168" font-size="11" fill="#333">C says &#8220;this is too expensive for what it is.&#8221; That is a price problem, and a price problem</text>
+      <text x="22" y="185" font-size="11" fill="#333">goes away if the price falls far enough. D says &#8220;we cannot even work out what it is worth&#8221; —</text>
+      <text x="22" y="196" font-size="11" fill="#333">and that stays true at ANY price.</text>
+    </svg>
+  </figure>
+
+  <h3>The reasoning, in four steps</h3>
+
+  <figure>
+    <svg viewBox="0 0 660 128" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="ar3" markerWidth="8" markerHeight="8" refX="6" refY="3"
+              orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7a6320"/></marker></defs>
+      <rect x="4" y="30" width="146" height="54" rx="4" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="77" y="52" text-anchor="middle" font-size="11" fill="#333">We cannot check</text>
+      <text x="77" y="68" text-anchor="middle" font-size="11" fill="#333">the SALES</text>
+      <line x1="154" y1="57" x2="176" y2="57" stroke="#7a6320" stroke-width="2" marker-end="url(#ar3)"/>
+
+      <rect x="182" y="30" width="146" height="54" rx="4" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="255" y="52" text-anchor="middle" font-size="11" fill="#333">so we cannot check</text>
+      <text x="255" y="68" text-anchor="middle" font-size="11" fill="#333">the PROFIT</text>
+      <line x1="332" y1="57" x2="354" y2="57" stroke="#7a6320" stroke-width="2" marker-end="url(#ar3)"/>
+
+      <rect x="360" y="30" width="146" height="54" rx="4" fill="#f5f2e9" stroke="#b9a96f"/>
+      <text x="433" y="52" text-anchor="middle" font-size="11" fill="#333">so we cannot check</text>
+      <text x="433" y="68" text-anchor="middle" font-size="11" fill="#333">what it is WORTH</text>
+      <line x1="510" y1="57" x2="532" y2="57" stroke="#7a6320" stroke-width="2" marker-end="url(#ar3)"/>
+
+      <rect x="538" y="24" width="118" height="66" rx="4" fill="#7a6320"/>
+      <text x="597" y="48" text-anchor="middle" font-size="11" fill="#fff">so it cannot</text>
+      <text x="597" y="64" text-anchor="middle" font-size="11" fill="#fff">hold other</text>
+      <text x="597" y="80" text-anchor="middle" font-size="11" fill="#fff">people's money</text>
+
+      <text x="330" y="115" text-anchor="middle" font-size="11" font-style="italic" fill="#666">The shares looked &#8220;cheap&#8221; — but cheap compared to numbers nobody can verify means nothing.</text>
+    </svg>
+  </figure>
+
+  <div class="box warn">
+    <h4>Why not just wait and see? (This is the answer most teams will give)</h4>
+    <p style="margin:0">Because waiting is not free. If the investigation ends badly,
+    the share price collapses and <strong>there is nobody left to buy from you</strong>.
+    You would be stuck holding it. So waiting gives you all of the danger and none
+    of the ability to escape. It only looks like the safe choice.</p>
+  </div>
+
+  <div class="box key">
+    <h4>One thing we are careful NOT to say</h4>
+    <p style="margin:0">We never accuse anyone of fraud. The problem asks you to think
+    like an analyst, not a detective. Our answer is narrower and much harder to argue
+    with: <strong>we cannot measure this, so we should not own it</strong> — and here
+    are the exact six documents that would change our mind.</p>
+  </div>
+</div>
+
+<!-- ============ 8. WHERE THINGS STAND ============ -->
+<div class="page">
+  <h2>7. What is finished, and what is not</h2>
+
+  <p class="lead">The thinking and the writing are done. Some admin is not.</p>
+
+  <table>
+    <tr><th>Item</th><th>State</th></tr>
+    <tr><td>The memo itself, all six required sections</td><td><span class="tick">done</span></td></tr>
+    <tr><td>Word count — 2,421, inside the 2,000–2,500 limit</td><td><span class="tick">done</span></td></tr>
+    <tr><td>The 500-word summary — 491 words</td><td><span class="tick">done</span> (only 9 spare)</td></tr>
+    <tr><td>One answer ticked (D)</td><td><span class="tick">done</span></td></tr>
+    <tr><td>File named <strong>Inferno_Mahi.pdf</strong></td><td><span class="tick">done</span></td></tr>
+    <tr><td>Page 1 — team name and leader</td><td><span class="tick">done</span></td></tr>
+    <tr><td><strong>Page 1 — other members, college, email, phone</strong></td>
+        <td><span class="cross">NOT DONE</span></td></tr>
+    <tr><td>Upload before 30 September, 11:59 PM</td><td><span class="cross">not yet</span></td></tr>
+  </table>
+
+  <div class="box warn">
+    <h4>The one job left</h4>
+    <p>Page 1 still has gaps where names and contact details should be. The rules
+    require every member's name, college, email and phone. Right now the page has
+    empty square brackets like <strong>[COLLEGE]</strong> sitting in it.</p>
+    <p style="margin:0"><strong>Submitting it in that state would look careless and could
+    break the rules.</strong> Fill those in, rebuild the PDF, and then read page 1 with
+    your own eyes before uploading.</p>
+  </div>
+
+  <h3>How to finish it, step by step</h3>
+  <p><span class="step">1</span> Open <strong>submission/memo.md</strong> in any text editor — Notepad works.</p>
+  <p><span class="step">2</span> Replace every bit of text in square brackets with the real details.</p>
+  <p><span class="step">3</span> If the team has fewer than four people, delete the extra table rows.</p>
+  <p><span class="step">4</span> Run this one command:</p>
+  <div class="box plain" style="font-family:Consolas,monospace;font-size:11pt">python tools/build.py</div>
+  <p><span class="step">5</span> It prints the word counts and says <strong>OK</strong> twice. If it does not say OK, something is over the limit — fix it before going on.</p>
+  <p><span class="step">6</span> Open the new <strong>Inferno_Mahi.pdf</strong>. Read page 1. Check there are no square brackets left anywhere.</p>
+  <p><span class="step">7</span> Upload it before <strong>30 September, 11:59 PM</strong>. Late is not accepted, for any reason.</p>
+
+  <div class="box key" style="margin-top:18pt">
+    <h4>If you remember nothing else from this document</h4>
+    <p style="margin:0">A gold company said it made an enormous amount of money
+    overseas. Almost none of it can be checked by anyone outside the company. Its
+    explanation for the gap is reasonable but unproven, and the paperwork that would
+    prove it has not been handed over. So our answer is not &#8220;they are
+    criminals&#8221; — it is <strong>&#8220;nobody can put a price on this, therefore
+    a fund looking after other people's savings has no business owning it.&#8221;</strong></p>
+  </div>
+</div>
+
+</body>
+</html>

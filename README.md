@@ -188,6 +188,8 @@ rajesh-exports-case-study/
 │   ├── memo.md                <- THE SUBMISSION, in editable text form
 │   └── Inferno_Mahi.pdf        <- the same thing as a finished PDF
 ├── docs/
+│   ├── case-explained-simply.pdf  <- START HERE if you know nothing
+│   ├── explainer.html         <- the source for that PDF
 │   ├── 01-the-competition.md  <- rules, deadlines, what must be handed in
 │   ├── 02-the-case.md         <- the case explained, with all the source data
 │   ├── 03-the-analysis.md     <- the full reasoning and every calculation
@@ -201,6 +203,17 @@ rajesh-exports-case-study/
 
 **If you only open one file, open [`submission/memo.md`](submission/memo.md).**
 That is the actual entry. Everything else exists to explain or produce it.
+
+**If finance is not your subject**, open
+[`docs/case-explained-simply.pdf`](docs/case-explained-simply.pdf) instead. It is a
+12-page illustrated walkthrough with flowcharts and everyday examples — a juice
+stall, a corner shop, an airport money-changer — that assumes you know nothing
+about finance, the competition, or the problem. Rebuild it after editing
+`docs/explainer.html` with:
+
+```bash
+"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="docs/case-explained-simply.pdf" "docs/explainer.html"
+```
 
 ---
 
