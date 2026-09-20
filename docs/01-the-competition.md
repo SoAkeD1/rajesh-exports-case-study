@@ -91,7 +91,7 @@ for announcements.
 |---|---|---|
 | Six named sections | [`submission/memo.md`](../submission/memo.md) | Done |
 | 2,000–2,500 word body | 2,421 words — verified by `tools/wordcount.py` | Done |
-| ≤ 500 word justification | 472 words — verified by the same script | Done |
+| ≤ 500 word justification | 491 words — verified by the same script | Done |
 | One option ticked | Option D, in the Final Recommendation Box | Done |
 | Page 1 team details | Placeholders in `memo.md` | **Outstanding** |
 | Correct filename | Set via `python tools/build.py TeamName_TLName` | **Outstanding** |

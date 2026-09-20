@@ -98,7 +98,19 @@ then when one goes up the other must go up too. They do not.
 
 The company's "you are comparing different things" defence could explain why one
 number is *bigger* than the other. It cannot explain why they move in **opposite
-directions**. Something other than the refinery is driving the big number.
+directions**.
+
+There is a fair objection here, and the memo answers it rather than ducking it.
+The table above is not strictly like-for-like: the top row covers *all* the
+overseas companies, the bottom row covers only Valcambi. So perhaps the gold
+business simply shifted to a different company in the group, and Valcambi's own
+figures shrank for innocent reasons.
+
+Possibly. But that reply costs the company something. It means the revenue now
+sits in companies that have **no stated gold-refining operations at all** — which
+moves the question rather than answering it. And it would be settled instantly
+by one disclosure: a breakdown of revenue company by company. That breakdown has
+never been provided.
 
 ### Reason 2 — the profit collapsed while the revenue grew
 
@@ -116,6 +128,13 @@ that is audited in India and that anyone can inspect — earned a 0.34% margin.
 The overseas arms, which nobody can inspect, earned **0.017%**. The part we can
 check behaves like a normal business. The part we cannot, does not.
 
+Again there are innocent explanations, and again the memo names them: the gold
+price moved sharply, so the company may have lost money on stock it was holding,
+or on hedging, or taken a one-off write-off. Any of those is possible. But each
+would show up as a **single identifiable hit in one year** — not as the steady
+two-year slide from 0.42% to 0.12% to 0.02% that the accounts actually show. And
+none of them has been disclosed.
+
 ### Reason 3 — gold that big cannot move invisibly
 
 This one is counter-intuitive, so read it twice.
@@ -130,6 +149,13 @@ certificates, shipping papers, insurance documents and matching bank transfers
 exist in enormous quantity, held by outside parties in several countries. Half a
 thousand tonnes of gold cannot be moved quietly. **The paperwork is not optional —
 it is unavoidable.** And it has not been produced.
+
+The obvious reply is that the paperwork is confidential — it names customers and
+suppliers, and companies do not hand that around. True, and it still does not
+work. A reconciliation statement and an auditor's sign-off name nobody at all,
+and documents can be given to a regulator privately, under seal. Confidentiality
+explains why the records are not *published*. It does not explain why they were
+not *handed over* when asked.
 
 That is why the physical scale argument, flipped around, is the strongest point
 in the memo rather than the weakest.
@@ -146,7 +172,10 @@ in the memo rather than the weakest.
 
 "Uninvestable" is the only answer that both removes the risk **and** says, in
 plain testable terms, exactly what evidence would bring the company back. The
-memo lists six such items.
+memo lists six such items, sets a size threshold on each so they cannot be
+satisfied with a token sample, and commits to looking again when the forensic
+report is published or at the FY26 results, whichever comes first. That last
+part matters: a verdict with no review date is not a judgement, it is a grudge.
 
 ---
 
@@ -222,8 +251,8 @@ Current status:
 
 | Check | State |
 |---|---|
-| Memo body word count | 2421 — within the 2,000–2,500 limit (2421/2500, 79 to spare) |
-| Justification word count | 472 — within the 500 limit |
+| Memo body word count | 2,421 — inside 2,000–2,500, with 79 words of headroom |
+| Justification word count | 491 — inside the 500 cap, but only **9 words spare**; recheck after any edit |
 | All six required sections present | Yes |
 | One option ticked in the recommendation box | Yes — Option D |
 | Page 1 team details | **Placeholders — still to fill in** |
