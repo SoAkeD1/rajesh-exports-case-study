@@ -1,12 +1,12 @@
 # Case Study Competition — Round 2 Submission
 
-**Team Name:** [TEAM NAME]
+**Team Name:** Inferno
 
-**Team Leader:** [TEAM LEADER NAME]
+**Team Leader:** Mahi
 
 | Member | College / Institution | Email | Phone |
 |---|---|---|---|
-| [MEMBER 1 — Team Leader] | [COLLEGE] | [EMAIL] | [PHONE] |
+| Mahi (Team Leader) | [COLLEGE] | [EMAIL] | [PHONE] |
 | [MEMBER 2] | [COLLEGE] | [EMAIL] | [PHONE] |
 | [MEMBER 3] | [COLLEGE] | [EMAIL] | [PHONE] |
 | [MEMBER 4] | [COLLEGE] | [EMAIL] | [PHONE] |

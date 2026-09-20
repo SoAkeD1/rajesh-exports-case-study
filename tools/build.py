@@ -8,8 +8,8 @@ in headless mode, which every Windows 11 machine already has -- no LaTeX,
 no pandoc, no Word install required.
 
 Usage:
-    python tools/build.py                      # -> submission/TeamName_TLsName.pdf
-    python tools/build.py Vanguard_ShrimonMishra
+    python tools/build.py                      # -> submission/Inferno_Mahi.pdf
+    python tools/build.py Inferno_MahiFullName   # override the default name
 """
 import html
 import re
@@ -161,7 +161,7 @@ def find_edge():
 
 
 def main():
-    name = sys.argv[1] if len(sys.argv) > 1 else "TeamName_TLsName"
+    name = sys.argv[1] if len(sys.argv) > 1 else "Inferno_Mahi"
     pdf = REPO / "submission" / f"{name}.pdf"
 
     print("Checking word limits:")

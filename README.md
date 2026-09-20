@@ -186,7 +186,7 @@ rajesh-exports-case-study/
 ├── README.md                  <- you are here
 ├── submission/
 │   ├── memo.md                <- THE SUBMISSION, in editable text form
-│   └── TeamName_TLsName.pdf   <- the same thing as a finished PDF
+│   └── Inferno_Mahi.pdf        <- the same thing as a finished PDF
 ├── docs/
 │   ├── 01-the-competition.md  <- rules, deadlines, what must be handed in
 │   ├── 02-the-case.md         <- the case explained, with all the source data
@@ -217,10 +217,10 @@ That single command checks both word limits, converts the memo to HTML, and
 prints it to PDF. To name the file properly for submission:
 
 ```bash
-python tools/build.py Vanguard_ShrimonMishra
+python tools/build.py Inferno_Mahi
 ```
 
-which writes `submission/Vanguard_ShrimonMishra.pdf`.
+which writes `submission/Inferno_Mahi.pdf`.
 
 To check the word counts without rebuilding:
 
@@ -256,7 +256,7 @@ Current status:
 | All six required sections present | Yes |
 | One option ticked in the recommendation box | Yes — Option D |
 | Page 1 team details | **Placeholders — still to fill in** |
-| Filename | **Placeholder — still to set** |
+| Filename | `Inferno_Mahi.pdf` — matches the required TeamName_TLsName pattern |
 
 ---
 

@@ -94,5 +94,5 @@ for announcements.
 | ≤ 500 word justification | 491 words — verified by the same script | Done |
 | One option ticked | Option D, in the Final Recommendation Box | Done |
 | Page 1 team details | Placeholders in `memo.md` | **Outstanding** |
-| Correct filename | Set via `python tools/build.py TeamName_TLName` | **Outstanding** |
+| Correct filename | `Inferno_Mahi.pdf` | Done |
 | Citations | Source note at the end of the memo | Done |

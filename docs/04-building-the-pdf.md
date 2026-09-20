@@ -43,17 +43,17 @@ This does three things in order:
    within their limits.
 2. Converts `submission/memo.md` into `build/memo.html`.
 3. Runs Edge headlessly to print that HTML to
-   `submission/TeamName_TLsName.pdf`.
+   `submission/Inferno_Mahi.pdf`.
 
 Expected output:
 
 ```
 Checking word limits:
   memo body (sections 1-6) :  2421   limit 2000-2500   OK
-  justification            :   472   limit 500 max        OK
+  justification            :   491   limit 500 max        OK
 
 Wrote build\memo.html
-Wrote submission\TeamName_TLsName.pdf  (137.1 KB)
+Wrote submission\Inferno_Mahi.pdf  (138.9 KB)
 ```
 
 ### Naming the file for submission
@@ -62,10 +62,10 @@ The rulebook requires the filename to be `TeamName_TLsName`. Pass it as an
 argument:
 
 ```bash
-python tools/build.py Vanguard_ShrimonMishra
+python tools/build.py Inferno_Mahi
 ```
 
-That writes `submission/Vanguard_ShrimonMishra.pdf`.
+That writes `submission/Inferno_Mahi.pdf`.
 
 ### Checking word counts without rebuilding
 
@@ -145,7 +145,7 @@ Open `submission/memo.md` in any text editor. A few things to respect:
 - **Keep the tick box characters.** `☒` marks the chosen option, `☐` the others.
   Exactly one should be `☒`.
 - **Re-run the build after every edit** and check the word counts.
-- The placeholders on page 1 (`[TEAM NAME]`, `[COLLEGE]`, …) are ordinary text.
+- The remaining placeholders on page 1 (`[COLLEGE]`, `[EMAIL]`, `[PHONE]`, `[MEMBER 2..4]`) are ordinary text.
   Replace them in place.
 
 ---
