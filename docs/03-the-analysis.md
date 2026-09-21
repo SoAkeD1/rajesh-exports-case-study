@@ -56,8 +56,10 @@ debt-free, so no lender can force a collapse before the facts emerge.
 
 ### Fact 1 — the two series move in opposite directions
 
-A net figure is a fixed *percentage* of a gross figure. If one rises, so must
-the other. Over FY21–FY25 they do the opposite.
+Refining fees are usually charged **per ounce**. So a fee tracks *throughput* —
+how much gold is handled — not the gold price. A rising price lifts gross revenue
+and leaves the fee flat; only lower throughput cuts the fee. (This is also why the
+net/gross ratio is *not* a fixed percentage: it falls whenever the price rises.)
 
 ```
 Revenue credited to subsidiaries   FY21  2,56,245  ->  FY25  4,16,072
@@ -67,13 +69,29 @@ Valcambi SA audited revenue        FY21      586   ->  FY25      427
   427 / 586 - 1 = -27.1%                                        DOWN
 ```
 
-Full series for Valcambi: 586 → 729 → 743 → 543 → 427.
+Full series for Valcambi: 586 → 729 → 743 → 543 → 427. Note it *rose* until FY23;
+the fall is FY23→FY25 (−42.5%), while attributed revenue rose 24.6% over the same
+two years. The memo quotes that window rather than claiming a steady decline.
 
-The gross-versus-net defence explains a difference in **level**. It cannot
-explain a difference in **direction**. Whatever is driving the attributed
-revenue upward, it is not the refinery's activity, because that was shrinking.
+**Decompose the top line into price × volume.** The rupee gold price rose roughly
+as much as attributed revenue over FY21–FY25:
 
-**This is the single hardest fact for the bull case and the memo leads with it.**
+```
+FY21 average international gold price ~ $1,824/oz x Rs 74.2 / 31.1035 = Rs 4,350/g
+FY25 average international gold price ~ $2,585/oz x Rs 84.6 / 31.1035 = Rs 7,029/g
+price rise ~ +62%        attributed revenue rise +62.4%   ->  implied volume ~ flat
+
+(cross-check with calendar-year LBMA averages: 2020 $1,774, 2024 $2,386 -> +52%)
+```
+
+So the attributed rise is mostly **price**, not volume. That is the company's best
+point, and the memo concedes it. The anomaly that survives is the other line: at
+flat volume a per-ounce fee should hold (or rise ~14% with the rupee), yet
+Valcambi's audited line **fell 27%**, implying its own throughput fell roughly a
+third. Gross-versus-net explains a gap in *level*; it cannot explain that fall.
+
+The monthly prices above are reconstructed from LBMA averages and RBI rates; treat
+them as approximate. The conclusion holds on either basis.
 
 ### Fact 2 — profit collapsed while revenue grew
 
@@ -87,9 +105,15 @@ Consolidated PAT       FY23     1,432  ->  FY25        95
 Margin: 0.42% -> 0.12% -> 0.02%
 ```
 
-A genuine trading business earns a thin but *stable* spread. Doubling the volume
-should roughly double the profit. Revenue rising while profit nearly disappears
-is not what a real throughput business looks like.
+Careful here: revenue rising does **not** mean volume rising. The rupee gold price
+rose about 51% over FY23→FY25 while revenue rose only 24.6%, so implied volume
+actually *fell* around 17%. A rising price also compresses the margin *percentage*
+mechanically — the same per-ounce spread becomes a smaller slice of a bigger number.
+
+What price cannot explain is the fall in **rupee** profit. At a constant per-ounce
+spread, FY25 PAT should be roughly 1,432 × 0.83 (volume) × 1.05 (rupee) ≈
+₹1,245 crore — and margin about 0.29%. The reported figures are ₹95 crore and
+0.02%. That gap is the robust fact, and it is what the memo leads with.
 
 The sharper version — comparing what we can inspect against what we cannot:
 
@@ -102,8 +126,12 @@ FY25 Indian parent (audited):PAT 24 / revenue   7,027  = 0.342%
 
 The Indian parent is audited under Indian rules and anyone can inspect it. It
 earns a normal thin-trading margin. The overseas entities, which nobody can
-inspect, earn a margin **twenty times worse**. The visible part of the group
-behaves like a real business; the invisible part does not.
+inspect, earn a margin **twenty times worse**.
+
+The obvious objection is business mix: jewellery manufacturing earns more than
+refining, so the parent *should* out-earn the subsidiaries. The exhibits refute
+it. In FY22 the subsidiaries earned 987 / 2,36,891 = **0.42%** while the parent
+earned 23 / 6,237 = **0.37%**. If mix explained the FY25 gap, that could not happen.
 
 ### Fact 3 — gold at that scale cannot move without paperwork
 
@@ -112,24 +140,27 @@ This argument is built carefully, because the obvious version of it is wrong.
 **The arithmetic:**
 
 ```
-Assume gold at Rs 80,000 per 10 grams
-  = Rs 8,000 per gram
-  = Rs 8,000,000,000 per tonne
-  = Rs 800 crore per tonne
+FY25 international gold price ~ Rs 70,000 per 10 grams (LBMA, at RBI rates)
+  = Rs 7,000 per gram
+  = Rs 7,000,000,000 per tonne
+  = Rs 700 crore per tonne
 
-FY25 consolidated revenue 4,23,099 crore / 800 = ~529 tonnes
+FY25 consolidated revenue 4,23,099 crore / 700 = ~604 tonnes
+FY25 subsidiary revenue   4,16,072 crore / 700 = ~594 tonnes
 ```
 
-Sensitivity, because the gold price assumption is doing real work here:
+**Use the international price, not the domestic one.** The Indian domestic price
+(around ₹80,000 per 10 g in FY25) includes import duty and GST, which do not apply
+to revenue earned overseas.
 
-| Gold price | ₹ crore per tonne | Implied tonnes |
-|---|---|---|
-| ₹70,000 / 10g | 700 | ~604 |
-| ₹80,000 / 10g | 800 | ~529 |
-| ₹90,000 / 10g | 900 | ~470 |
+| Gold price basis | ₹ crore per tonne | Implied tonnes | Share of 5,002 t |
+|---|---|---|---|
+| ₹64,000 / 10g (calendar 2024 LBMA average) | 640 | ~661 | 13.2% |
+| ₹70,000 / 10g (FY25 international average) | 700 | ~604 | 12.1% |
+| ₹80,000 / 10g (domestic, duty-inclusive — wrong basis) | 800 | ~529 | 10.6% |
 
-Against world annual gold supply of roughly 4,800 tonnes, that is roughly
-**10–13%** of global supply.
+World gold supply in 2025 was **5,002 tonnes** (World Gold Council, Gold Demand
+Trends Full Year 2025), so the implied volume is roughly **11–13%** of it.
 
 **The wrong conclusion:** "that is impossible, therefore the revenue is fake."
 It is *not* impossible. Valcambi is one of the world's largest refineries and
@@ -148,18 +179,28 @@ by **third parties**:
 - counterparty invoices
 - bank settlements matching those invoices
 
-Half a thousand tonnes of gold cannot be moved quietly. The documentation is not
-a courtesy; it is operationally unavoidable, and much of it is not even in the
-company's own control.
+Six hundred tonnes of gold cannot be moved quietly. The documentation is not a
+courtesy; it is operationally unavoidable, and much of it is not even in the
+company's own control. Two caveats keep this honest: metal traded on paper
+(unallocated) or re-traded several times produces no vault or shipping papers —
+but it still produces **invoices and bank settlements**, which carry the argument
+on their own.
 
 So the bull case's own premise — that the scale is real — is what makes the
-missing paperwork damning. And a gross-versus-net dispute is resolved by **one
-reconciliation schedule**, producible in a week. Three months after the interim
-order, and after repeated requests preceding it, no such schedule exists.
+missing paperwork damning. A gross-versus-net dispute is resolved by **one
+reconciliation schedule**, producible in a week. The regulator says it asked
+repeatedly and was not given the records (Exhibit 7); the company says documents
+will follow (Exhibit 9), and the case records none yet.
 
-Exhibit 12 classifies *refusal to share records* as bearish on its own footing.
-Non-production is not a neutral absence when production would be cheap and
-immediately exculpatory.
+Exhibit 12 treats *refusal to share records* as bearish. "Not yet produced" is not
+the same as "refused", and the memo keeps them apart — but even short of refusal,
+non-production is not neutral when production would be cheap and immediately
+exculpatory.
+
+**Confidentiality and Swiss law.** Swiss blocking statutes (Criminal Code Arts.
+271 and 273) restrict handing business records directly to a foreign authority,
+so "hand them over under seal" is weaker than it sounds. The stronger answer: the
+consolidation schedule is the Indian parent's own document, outside Swiss rules.
 
 ---
 
@@ -167,13 +208,14 @@ immediately exculpatory.
 
 **Revenue is booked at a holding company.** Exhibit 1 shows large revenues
 attributed to **Global Gold Refineries SA**, which is a *holding* company, rather
-than to Valcambi, the refinery beneath it that does the actual work. Revenue
-recognised where there is no operating substance is the classic signature of
-value created by consolidation entries rather than by commerce.
+than to Valcambi, the refinery beneath it that does the actual work. That is not
+proof of anything: commodity groups often book sales in a trading entity while the
+refinery earns a fee. But the company's reply (Exhibit 9) does not offer that
+explanation, so the question stands.
 
-**The consolidation itself was never auditable.** The group relied on unaudited
-holding company consolidation numbers instead of visible audited subsidiary
-accounts. Investors were asked to trust a consolidation they were never
+**The consolidation itself was never auditable.** Ananya Menon asks why the group
+relied on unaudited holding company consolidation numbers instead of visible
+audited subsidiary accounts. Investors were asked to trust a consolidation they were never
 permitted to examine. This is Ananya Menon's point in the case, and it is the
 reason "show us the audited subsidiary accounts" is a threshold condition in the
 memo rather than a nice-to-have.
@@ -220,14 +262,17 @@ sell into the bad news.** So holding means accepting the full downside of an
 adverse finding while giving up the ability to act on it. The optionality of
 waiting is *negative*.
 
-B is also the answer most teams will give, which makes it the least
-differentiated.
+B's strongest form deserves respect: the order is interim, and the company has
+promised documents (Exhibit 9). The memo's answer is not that B is foolish, but
+that the cost of being wrong while holding cannot be undone once trading locks.
 
 ### Why D and not C (exit)
 
-C treats this as a *price* problem — as though a lower price would compensate.
-It would not. The defect is in the financial statements themselves, and it
-survives any price. C also says nothing about what would bring the name back.
+The case defines C as "the uncertainty around revenue quality, disclosures and
+governance makes the stock unsuitable". D sells too. What D adds is a **formal
+gate**: the name leaves the investable universe, so it cannot be bought back on
+price alone, and the memo states exactly which independently obtained evidence
+would readmit it — plus the triggers that would make the exclusion permanent.
 
 ### Why D is defensible rather than dramatic
 
@@ -249,7 +294,7 @@ Recording these matters, because avoiding bad arguments is part of the analysis:
 
 | Tempting argument | Why it was rejected |
 |---|---|
-| "Revenue that big must be fake" | It is not implausible for a major refinery. The tonnage maths shows ~11% of world supply, which is large but achievable. Arguing from disbelief would be shot down. |
+| "Revenue that big must be fake" | It is not implausible for a major refinery. The tonnage maths shows ~12% of world supply, which is large but achievable. Arguing from disbelief would be shot down. |
 | "Tiny margins prove fraud" | Flatly untrue in bullion. This is exactly the mistake the broker warns against, and the case sets the trap deliberately. |
 | "The regulator said so, so it is true" | The order is interim and *prima facie*. Treating an allegation as a finding is poor analysis. |
 | "The share price crashed, so something is wrong" | Meera explicitly says not to tell her the stock is down. Price is not evidence. |
@@ -265,14 +310,21 @@ be documents the company chose to hand over.
 
 1. **A signed reconciliation** bridging Valcambi SA's statutory accounts to the
    ₹4,16,072 crore FY25 attributed figure, prepared independently.
-2. **Customer-wise sales ledger**, with confirmations obtained directly by the
-   auditor rather than routed through the company.
+2. **Customer-wise sales ledger** for the top 20 counterparties, covering at least
+   80% of attributed revenue, confirmed directly by the auditor.
 3. **Vendor-wise procurement ledger**, matched to vault, assay and shipping
    records showing physical metal movement.
-4. **Bank statements reconciling to invoices** — cash, not accounting entries.
+4. **Bank statements reconciling to invoices** across at least 80% of attributed
+   revenue — cash, not accounting entries — with operating cash flow reconciled to
+   reported profit.
 5. **Confirmation that subsidiary accounts were audited in their own
    jurisdictions**, with those reports made available.
-6. **A clean forensic audit** plus an unqualified FY26 audit opinion.
+6. **A clean forensic audit** plus an unqualified FY27 audit opinion.
+
+**Review trigger:** the forensic report or the next audited results, whichever
+comes first. (Not "FY26 results": under SEBI LODR Regulation 33(3)(d), annual
+audited results are due within 60 days of year-end, so FY26's were due by 30 May
+2026 — before the June order.)
 
 And the things that would make the exclusion permanent: any restatement, an
 auditor resignation or qualification, continued non-production, unexplained

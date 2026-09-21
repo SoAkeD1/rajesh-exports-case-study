@@ -189,7 +189,13 @@ documents.
 **Assay certificate** — a document certifying the purity of a specific batch of
 gold, issued after testing.
 
-**Tonne** — 1,000 kilograms. World gold supply is roughly 4,800 tonnes a year.
+**Tonne** — 1,000 kilograms. World gold supply was 5,002 tonnes in 2025, of which
+about 3,672 tonnes was newly mined (World Gold Council).
+
+**Per-ounce fee** — how refiners are usually paid: a fixed charge for each ounce
+handled, regardless of the gold price. So when the gold price rises, the refiner's
+*revenue* can balloon while its *fee income* stays flat. This is why a rising
+price makes margins look thinner without anything being wrong.
 
 ---
 

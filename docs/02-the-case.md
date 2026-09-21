@@ -137,6 +137,9 @@ The case itself notes that thin margins are not automatically suspicious in
 bullion trading — but that when margins are *this* thin, small accounting
 differences can change the whole picture.
 
+*Source note:* recomputing FY22 gives 1,009 ÷ 2,43,128 = 0.415%, which rounds to
+0.42%, not the 0.41% printed. The table reproduces the case as supplied.
+
 ### Exhibit 8 — The heart of the dispute (₹ crore)
 
 | Year | Credited to subsidiaries | Valcambi SA audited revenue | Difference |
@@ -150,6 +153,10 @@ differences can change the whole picture.
 
 This single table is the case. The audited refinery is roughly **0.2%** of what
 the group credits to its overseas arms.
+
+*Source note:* the columns sum to 15,18,412 and 3,028 (not 15,18,413 and 3,027),
+and the FY22 and FY25 Difference cells are each ₹1 crore higher than the
+subtraction gives. Immaterial, but a forensic reading should notice.
 
 ---
 

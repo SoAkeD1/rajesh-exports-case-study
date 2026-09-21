@@ -50,15 +50,24 @@ hr { border: 0; border-top: 0.5pt solid #d8d3c4; margin: 13pt 0; }
 .box { display: inline-block; width: 9pt; height: 9pt; border: 1pt solid #666;
        vertical-align: -1pt; margin-right: 3pt; }
 .box.checked { background: #5d4c18; border-color: #5d4c18; position: relative; }
-.box.checked::after { content: "\2713"; color: #fff; font-size: 8pt;
+.box.checked::after { content: "✓"; color: #fff; font-size: 8pt;
        position: absolute; left: 1pt; top: -2pt; font-family: 'Segoe UI', sans-serif; }
 em.note { font-size: 8.5pt; color: #666; }
 """
 
 
+def smart_quotes(t):
+    """Straight quotes to typographic ones. Word counts are unaffected."""
+    t = re.sub(r"(?<=\w)'(?=\w)", "’", t)
+    t = re.sub(r"(^|[\s(\[—–])\"", lambda m: m.group(1) + "“", t)
+    t = t.replace('"', "”")
+    t = re.sub(r"(^|[\s(\[—–])'", lambda m: m.group(1) + "‘", t)
+    return t.replace("'", "’")
+
+
 def inline(t):
     """Apply inline markdown (bold, italic) and the ballot-box glyphs."""
-    t = html.escape(t)
+    t = html.escape(smart_quotes(t), quote=False)
     t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
     t = re.sub(r"(?<!\*)\*([^*]+?)\*(?!\*)", r"<em>\1</em>", t)
     t = t.replace("\u2612", '<span class="box checked"></span>')
@@ -148,7 +157,7 @@ def to_html(src):
             else:
                 out.append(f"<p>{text}</p>")
 
-    return (f"<!DOCTYPE html><html><head><meta charset='utf-8'><title>IC Memo</title>"
+    return (f"<!DOCTYPE html><html><head><meta charset='utf-8'><title>Team Inferno — Rajesh Exports IC Memo</title>"
             f"<style>{CSS}</style></head><body>{''.join(out)}</body></html>")
 
 

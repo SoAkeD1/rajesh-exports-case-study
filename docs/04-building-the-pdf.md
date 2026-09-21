@@ -49,11 +49,12 @@ Expected output:
 
 ```
 Checking word limits:
-  memo body (sections 1-6) :  2421   limit 2000-2500   OK
-  justification            :   491   limit 500 max        OK
+                              K1     K2     K3    worst   limit
+  memo body (sections 1-6)   2441   2410   2470    2470   2000-2500  OK  (30 spare)
+  justification               487    477    493     493   max 500   OK  (7 spare)
 
 Wrote build\memo.html
-Wrote submission\Inferno_Mahi.pdf  (138.9 KB)
+Wrote submission\Inferno_Mahi.pdf  (141.2 KB)
 ```
 
 ### Naming the file for submission
@@ -87,16 +88,24 @@ Slices `memo.md` into its two limited regions by searching for fixed markers:
 - **Body** = from `## 1. Recommendation` up to `# Final Recommendation Box`
 - **Justification** = from `## Justification` up to the closing source note
 
-It then strips markdown punctuation (`#`, `*`, `|`, backticks and so on) and
-counts anything left containing a letter or digit. The cover page, the section
-headings' markup and the recommendation table are excluded, so the number
-reflects prose the way a marker would count it.
+It strips markdown syntax (heading hashes, bold and italic markers, horizontal
+rules) and then counts the text **three ways**, because the rulebook never says
+how a word is counted:
 
-**One subtlety, and it matters.** Em and en dashes separate words; the ASCII
-hyphen does **not**. A marker (and Microsoft Word) counts "price-to-book" as one
-word, not three. An earlier version of this script stripped hyphens along with
-the other punctuation, which split 38 compounds in the memo and over-reported
-the body by roughly 2%. If you edit the regex, keep the hyphen out of it.
+| Convention | Rule | Example |
+|---|---|---|
+| **K1** | Every whitespace-separated token counts, even a lone dash | `—` = 1 word |
+| **K2** | Only tokens containing a letter or digit count | `—` = 0 words |
+| **K3** | As K2, but hyphen-, dash- and slash-joined compounds are split | `price-to-book` = 3 words |
+
+The ceilings (2,500 and 500) are tested against the **highest** of the three and
+the floor (2,000) against the **lowest**, so a pass means a pass under any
+convention a marker might use. The cover page, the memo header, the
+recommendation table and the source note are excluded; section headings count.
+
+**Why this matters.** An earlier version reported only one convention and showed
+the justification at 491. Under K3 it was actually 503 — over the limit. Always
+read the *worst* column.
 
 > If you rename a heading in `memo.md`, update the markers in this file or the
 > count will fail.

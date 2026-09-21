@@ -88,17 +88,20 @@ Three facts are what break that defence.
 
 ### Reason 1 — the two sets of numbers move in opposite directions
 
-If the group's giant revenue really comes from the Swiss refinery's activity,
-then when one goes up the other must go up too. They do not.
+A refinery is paid a fee per ounce of gold it handles. So its fee tracks *how much*
+gold passes through, not what gold is worth. Watch what the two numbers do.
 
 | | FY21 | FY25 | Change |
 |---|---|---|---|
 | Revenue the group credits to its overseas arms | ₹2,56,245 cr | ₹4,16,072 cr | **up 62%** |
 | Valcambi's own audited revenue | ₹586 cr | ₹427 cr | **down 27%** |
 
-The company's "you are comparing different things" defence could explain why one
-number is *bigger* than the other. It cannot explain why they move in **opposite
-directions**.
+The top row's 62% rise roughly matches the rise in the rupee gold price over the
+same years. So the *amount* of gold handled was about flat — the rise is mostly
+price. But if the amount of gold was flat, a per-ounce fee should have stayed flat
+too. Instead the refinery's own audited line **fell 27%**. The company's "you are
+comparing different things" defence explains why one number is *bigger* than the
+other; it does not explain that fall.
 
 There is a fair objection here, and the memo answers it rather than ducking it.
 The table above is not strictly like-for-like: the top row covers *all* the
@@ -114,8 +117,9 @@ never been provided.
 
 ### Reason 2 — the profit collapsed while the revenue grew
 
-A real trading business earns a thin but steady slice. More volume should mean
-more profit. Here, revenue grew and profit nearly vanished.
+When the gold price rises, a bullion trader's profit *percentage* shrinks — the
+same fee is now a smaller slice of a bigger number. But its profit *in rupees*
+should hold up. Here, profit in rupees nearly vanished.
 
 | | FY23 | FY25 |
 |---|---|---|
@@ -128,34 +132,39 @@ that is audited in India and that anyone can inspect — earned a 0.34% margin.
 The overseas arms, which nobody can inspect, earned **0.017%**. The part we can
 check behaves like a normal business. The part we cannot, does not.
 
-Again there are innocent explanations, and again the memo names them: the gold
-price moved sharply, so the company may have lost money on stock it was holding,
-or on hedging, or taken a one-off write-off. Any of those is possible. But each
-would show up as a **single identifiable hit in one year** — not as the steady
-two-year slide from 0.42% to 0.12% to 0.02% that the accounts actually show. And
-none of them has been disclosed.
+"That's just business mix," someone will say — jewellery earns more than refining.
+But in FY22 the overseas arms actually earned a *higher* margin than the parent
+(0.42% against 0.37%). So mix does not explain the FY25 gap.
+
+Again there are innocent explanations, and again the memo names them: the company
+may have lost money on stock it was holding, or on hedging, or taken a one-off
+write-off. Any of those is possible. But none has been disclosed, and a one-off
+charge would not repeat across two years of falling rupee profit.
 
 ### Reason 3 — gold that big cannot move invisibly
 
 This one is counter-intuitive, so read it twice.
 
-At roughly ₹80,000 per 10 grams, FY25's ₹4,23,099 crore of revenue works out to
-about **530 tonnes of gold value**. Against world gold supply of roughly 4,800 tonnes
-a year, that is large but genuinely possible for a major refinery — so it does
-**not** prove anything is wrong. We say so plainly in the memo.
+At the international gold price of about ₹70,000 per 10 grams (LBMA, converted at
+RBI rates), FY25's ₹4,23,099 crore of revenue works out to about **600 tonnes of
+gold value**. World gold supply in 2025 was 5,002 tonnes (World Gold Council), so
+that is about 12% — large but genuinely possible for a major refinery. It does
+**not** prove anything is wrong, and the memo says so plainly.
 
-But here is the thing: *if* 530 tonnes of metal really moved, then vault receipts, purity
+But here is the thing: *if* that much gold really moved, then vault receipts, purity
 certificates, shipping papers, insurance documents and matching bank transfers
-exist in enormous quantity, held by outside parties in several countries. Half a
-thousand tonnes of gold cannot be moved quietly. **The paperwork is not optional —
-it is unavoidable.** And it has not been produced.
+exist in enormous quantity, held by outside parties in several countries. Even gold
+that is traded on paper, without moving, still leaves invoices and bank transfers.
+**The paperwork is not optional — it is unavoidable.** The regulator says it asked
+for it repeatedly and was not given it. The company says documents will follow; the
+case records none yet.
 
 The obvious reply is that the paperwork is confidential — it names customers and
 suppliers, and companies do not hand that around. True, and it still does not
-work. A reconciliation statement and an auditor's sign-off name nobody at all,
-and documents can be given to a regulator privately, under seal. Confidentiality
-explains why the records are not *published*. It does not explain why they were
-not *handed over* when asked.
+work. A reconciliation statement and an auditor's sign-off name nobody at all, and
+the key reconciliation belongs to the Indian parent company, so Swiss secrecy rules
+do not cover it. Confidentiality explains why the records are not *published*. It
+does not explain why they were not *handed over* when asked.
 
 That is why the physical scale argument, flipped around, is the strongest point
 in the memo rather than the weakest.
@@ -166,15 +175,16 @@ in the memo rather than the weakest.
   ends badly, the share price hits its daily fall limit and there is nobody to
   sell to. You would be stuck holding it — all of the downside, none of the
   ability to act.
-- **Why not simply "sell"?** Selling treats this as a price problem, as if a
-  cheaper price would fix it. It would not. The problem is that the financial
-  statements themselves cannot be relied on, and that stays true at any price.
+- **Why not simply "sell"?** Selling is part of the answer — the memo sells too.
+  The difference is the rule attached. Plain selling says "this looks unsuitable".
+  "Uninvestable" adds a gate: no buying back at *any* price until the missing
+  records are independently checked.
 
 "Uninvestable" is the only answer that both removes the risk **and** says, in
 plain testable terms, exactly what evidence would bring the company back. The
 memo lists six such items, sets a size threshold on each so they cannot be
 satisfied with a token sample, and commits to looking again when the forensic
-report is published or at the FY26 results, whichever comes first. That last
+report is published or at the next audited results, whichever comes first. That last
 part matters: a verdict with no review date is not a judgement, it is a grudge.
 
 ---
@@ -197,7 +207,7 @@ rajesh-exports-case-study/
 │   └── 05-glossary.md         <- every finance term, in plain English
 ├── tools/
 │   ├── build.py               <- turns memo.md into the final PDF
-│   └── wordcount.py           <- checks the two word limits
+│   └── wordcount.py           <- checks both word limits under three counting conventions
 └── build/                     <- generated files (not tracked by git)
 ```
 
@@ -251,23 +261,25 @@ Full details, including what to do if Edge is unavailable, are in
 The memo is written and both word limits are met. These items are **not** done
 yet:
 
-- [ ] **Fill in the placeholders on page 1** of `submission/memo.md` —
-      `[TEAM NAME]`, `[TEAM LEADER NAME]`, and the four member rows
-      (`[MEMBER 1]`, `[COLLEGE]`, `[EMAIL]`, `[PHONE]`).
-- [ ] **Rebuild the PDF** with the correct filename:
-      `python tools/build.py YourTeam_YourLeaderName`
+- [ ] **Fill in the placeholders on page 1** of `submission/memo.md` — the
+      member names, colleges, emails and phones (`[MEMBER 2]`, `[COLLEGE]`,
+      `[EMAIL]`, `[PHONE]`), and delete any unused rows.
+- [ ] **Do not commit the filled-in page 1.** This repository is public, so
+      committing it would publish every member's phone number and email.
+- [ ] **Rebuild the PDF** with the registered names:
+      `python tools/build.py Inferno_RegisteredLeaderName`
 - [ ] **Open the PDF and read it** — confirm no `[PLACEHOLDER]` text survives.
-- [ ] **Upload before 30 September, 11:59 PM.** Late entries are not accepted
-      under any circumstances.
+- [ ] **Upload before 30 September, 11:59 PM** — ideally by 28 September.
+      Late entries are not accepted under any circumstances.
 
 Current status:
 
 | Check | State |
 |---|---|
-| Memo body word count | 2,421 — inside 2,000–2,500, with 79 words of headroom |
-| Justification word count | 491 — inside the 500 cap, but only **9 words spare**; recheck after any edit |
+| Memo body word count | 2,470 at the strictest convention — inside 2,000–2,500, 30 words spare |
+| Justification word count | 493 at the strictest convention — inside the 500 cap, **7 words spare**; recheck after any edit |
 | All six required sections present | Yes |
-| One option ticked in the recommendation box | Yes — Option D |
+| One option ticked in the recommendation box | Yes — Option D, with a visible tick |
 | Page 1 team details | **Placeholders — still to fill in** |
 | Filename | `Inferno_Mahi.pdf` — matches the required TeamName_TLsName pattern |
 
@@ -275,13 +287,16 @@ Current status:
 
 ## 8. A note on sources
 
-Every figure in the memo comes from the exhibits in the competition's own case
-booklet — Exhibits 1, 4, 5, 6, 8, 9, 11 and 12. No outside research was used.
-That was a deliberate choice: the case is fictionalised, so mixing in real-world
-reporting would risk contradicting the organisers' own numbers, and the marking
-rewards reasoning from the evidence given.
+Every company figure in the memo comes from the exhibits in the competition's own
+case booklet (Exhibits 1–12). No news reporting or filings about any real company
+were used. That was a deliberate choice: the case is fictionalised, so mixing in
+real-world reporting would risk contradicting the organisers' own numbers, and the
+marking rewards reasoning from the evidence given.
 
-The only two numbers from outside the booklet are the gold price
-(≈ ₹80,000 per 10 grams) and annual world gold supply (≈ 4,800 tonnes), both used
-for the tonnage estimate in Reason 3. Both are stated as assumptions in the memo
-itself so that a reader can challenge them.
+Two general reference figures come from outside the booklet, and the memo cites
+both: the FY25 international gold price (about ₹70,000 per 10 grams — LBMA Gold
+Price, converted at RBI reference rates) and 2025 world gold supply (5,002 tonnes —
+World Gold Council, Gold Demand Trends Full Year 2025). They feed the tonnage
+estimate in Reason 3 and the price-versus-volume point in Reason 1. The domestic
+Indian price (around ₹80,000) is deliberately *not* used: it includes import duty
+and GST, which do not apply to revenue earned overseas.

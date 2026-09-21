@@ -4,3 +4,7 @@ build/
 # Python
 __pycache__/
 *.pyc
+
+# Local-only: strategy notes and promo video (never publish mid-round)
+case.md
+brag-output/
