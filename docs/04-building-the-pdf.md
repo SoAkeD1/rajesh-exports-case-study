@@ -50,11 +50,12 @@ Expected output:
 ```
 Checking word limits:
                               K1     K2     K3    worst   limit
-  memo body (sections 1-6)   2441   2410   2470    2470   2000-2500  OK  (30 spare)
-  justification               487    477    493     493   max 500   OK  (7 spare)
+  memo body (sections 1-6)   2434   2403   2464    2464   2000-2500  OK  (36 spare)
+  body + memo header                               2493   max 2500  OK  (7 spare)
+  justification               479    469    486     486   max 500   OK  (14 spare)
 
 Wrote build\memo.html
-Wrote submission\Inferno_Mahi.pdf  (141.2 KB)
+Wrote submission\Inferno_Mahi.pdf  (142.6 KB)
 ```
 
 ### Naming the file for submission

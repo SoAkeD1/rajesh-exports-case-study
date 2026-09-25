@@ -153,14 +153,16 @@ FY25 subsidiary revenue   4,16,072 crore / 700 = ~594 tonnes
 (around ₹80,000 per 10 g in FY25) includes import duty and GST, which do not apply
 to revenue earned overseas.
 
-| Gold price basis | ₹ crore per tonne | Implied tonnes | Share of 5,002 t |
+| Gold price basis | ₹ crore per tonne | Implied tonnes | Share of 4,962 t |
 |---|---|---|---|
-| ₹64,000 / 10g (calendar 2024 LBMA average) | 640 | ~661 | 13.2% |
-| ₹70,000 / 10g (FY25 international average) | 700 | ~604 | 12.1% |
-| ₹80,000 / 10g (domestic, duty-inclusive — wrong basis) | 800 | ~529 | 10.6% |
+| ₹64,000 / 10g (calendar 2024 LBMA average) | 640 | ~661 | 13.3% |
+| ₹70,000 / 10g (FY25 international average) | 700 | ~604 | 12.2% |
+| ₹80,000 / 10g (domestic, duty-inclusive — wrong basis) | 800 | ~529 | 10.7% |
 
-World gold supply in 2025 was **5,002 tonnes** (World Gold Council, Gold Demand
-Trends Full Year 2025), so the implied volume is roughly **11–13%** of it.
+World gold supply in calendar 2024 was **4,962 tonnes** (World Gold Council, Gold
+Demand Trends Full Year 2025). Calendar 2024 is used because it covers nine of FY25's
+twelve months; 2025's 5,002 tonnes gives the same answer. The implied volume is
+roughly **11–13%** of world supply.
 
 **The wrong conclusion:** "that is impossible, therefore the revenue is fake."
 It is *not* impossible. Valcambi is one of the world's largest refineries and
@@ -188,7 +190,7 @@ on their own.
 
 So the bull case's own premise — that the scale is real — is what makes the
 missing paperwork damning. A gross-versus-net dispute is resolved by **one
-reconciliation schedule**, producible in a week. The regulator says it asked
+reconciliation schedule**. The regulator says it asked
 repeatedly and was not given the records (Exhibit 7); the company says documents
 will follow (Exhibit 9), and the case records none yet.
 
@@ -208,7 +210,7 @@ consolidation schedule is the Indian parent's own document, outside Swiss rules.
 
 **Revenue is booked at a holding company.** Exhibit 1 shows large revenues
 attributed to **Global Gold Refineries SA**, which is a *holding* company, rather
-than to Valcambi, the refinery beneath it that does the actual work. That is not
+than to Valcambi, the refinery that does the actual work. That is not
 proof of anything: commodity groups often book sales in a trading entity while the
 refinery earns a fee. But the company's reply (Exhibit 9) does not offer that
 explanation, so the question stands.

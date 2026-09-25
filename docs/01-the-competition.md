@@ -90,10 +90,10 @@ for announcements.
 | Requirement | Where it is met | Status |
 |---|---|---|
 | Six named sections | [`submission/memo.md`](../submission/memo.md) | Done |
-| 2,000–2,500 word body | 2,470 words at the strictest of three conventions — `tools/wordcount.py` | Done |
-| ≤ 500 word justification | 493 words at the strictest convention — same script | Done |
+| 2,000–2,500 word body | 2,464 words at the strictest of three conventions (2,493 with the memo header) — `tools/wordcount.py` | Done |
+| ≤ 500 word justification | 486 words at the strictest convention — same script | Done |
 | One option ticked | Option D, in the Final Recommendation Box, with a visible tick | Done |
-| External statistics cited | Gold price (LBMA/RBI) and world supply (World Gold Council) cited in the source note | Done |
+| External statistics cited | Gold price (LBMA/RBI), world supply (World Gold Council) and Swiss Criminal Code cited in the source note | Done |
 | Page 1 team details | Placeholders in `memo.md` | **Outstanding** |
 | Correct filename | `Inferno_Mahi.pdf` | Done |
 | Citations | Source note at the end of the memo | Done |

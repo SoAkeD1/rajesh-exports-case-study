@@ -79,12 +79,18 @@ def report(path=MEMO):
     """Print every convention and return True if all limits hold under all of them."""
     c = all_counts(path)
     b, j = c["body"], c["just"]
-    body_ok = min(b.values()) >= BODY_LO and max(b.values()) <= BODY_HI
+    # A marker may also count the To/From/Date/Subject block, so the ceiling must hold with it.
+    t = Path(path).read_text(encoding="utf-8")
+    hdr = render(slice_between(t, "# Investment Committee Memo", "## 1. Recommendation"))
+    with_hdr = max(b[k] + f(hdr) for k, f in (("K1", k1), ("K2", k2), ("K3", k3)))
+    body_ok = min(b.values()) >= BODY_LO and max(b.values()) <= BODY_HI and with_hdr <= BODY_HI
     just_ok = max(j.values()) <= JUST_MAX
     print("                              K1     K2     K3    worst   limit")
     print(f"  memo body (sections 1-6) {b['K1']:6d} {b['K2']:6d} {b['K3']:6d} {max(b.values()):7d}   "
           f"{BODY_LO}-{BODY_HI}  {'OK' if body_ok else 'OUT OF RANGE'}"
           f"  ({BODY_HI - max(b.values())} spare)")
+    print(f"  body + memo header                            {with_hdr:7d}   "
+          f"max {BODY_HI}  {'OK' if with_hdr <= BODY_HI else 'OVER LIMIT'}  ({BODY_HI - with_hdr} spare)")
     print(f"  justification            {j['K1']:6d} {j['K2']:6d} {j['K3']:6d} {max(j.values()):7d}   "
           f"max {JUST_MAX}   {'OK' if just_ok else 'OVER LIMIT'}"
           f"  ({JUST_MAX - max(j.values())} spare)")

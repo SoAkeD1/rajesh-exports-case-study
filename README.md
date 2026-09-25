@@ -147,7 +147,8 @@ This one is counter-intuitive, so read it twice.
 
 At the international gold price of about ₹70,000 per 10 grams (LBMA, converted at
 RBI rates), FY25's ₹4,23,099 crore of revenue works out to about **600 tonnes of
-gold value**. World gold supply in 2025 was 5,002 tonnes (World Gold Council), so
+gold value**. World gold supply in calendar 2024 — which covers nine months of FY25 — was 4,962
+tonnes (World Gold Council), so
 that is about 12% — large but genuinely possible for a major refinery. It does
 **not** prove anything is wrong, and the memo says so plainly.
 
@@ -276,8 +277,8 @@ Current status:
 
 | Check | State |
 |---|---|
-| Memo body word count | 2,470 at the strictest convention — inside 2,000–2,500, 30 words spare |
-| Justification word count | 493 at the strictest convention — inside the 500 cap, **7 words spare**; recheck after any edit |
+| Memo body word count | 2,464 at the strictest convention — inside 2,000–2,500, 36 words spare (2,493 even if the To/From header is counted) |
+| Justification word count | 486 at the strictest convention — inside the 500 cap, **14 words spare**; recheck after any edit |
 | All six required sections present | Yes |
 | One option ticked in the recommendation box | Yes — Option D, with a visible tick |
 | Page 1 team details | **Placeholders — still to fill in** |
@@ -294,9 +295,10 @@ real-world reporting would risk contradicting the organisers' own numbers, and t
 marking rewards reasoning from the evidence given.
 
 Two general reference figures come from outside the booklet, and the memo cites
-both: the FY25 international gold price (about ₹70,000 per 10 grams — LBMA Gold
-Price, converted at RBI reference rates) and 2025 world gold supply (5,002 tonnes —
-World Gold Council, Gold Demand Trends Full Year 2025). They feed the tonnage
+both: the FY21 and FY25 international gold price (about ₹70,000 per 10 grams in FY25 — LBMA
+Gold Price, converted at RBI reference rates) and calendar-2024 world gold supply (4,962
+tonnes — World Gold Council, Gold Demand Trends Full Year 2025). The memo also cites
+the Swiss Criminal Code (Articles 271 and 273) where it mentions Swiss blocking rules. They feed the tonnage
 estimate in Reason 3 and the price-versus-volume point in Reason 1. The domestic
 Indian price (around ₹80,000) is deliberately *not* used: it includes import duty
 and GST, which do not apply to revenue earned overseas.
