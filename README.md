@@ -197,7 +197,8 @@ rajesh-exports-case-study/
 ├── README.md                  <- you are here
 ├── submission/
 │   ├── memo.md                <- THE SUBMISSION, in editable text form
-│   └── Inferno_Mahi.pdf        <- the same thing as a finished PDF
+│   ├── Inferno_Mahi.pdf        <- the same thing as a finished PDF (9 pages)
+│   └── figures/               <- the memo's two charts, as PNG images
 ├── docs/
 │   ├── case-explained-simply.pdf  <- START HERE if you know nothing
 │   ├── explainer.html         <- the source for that PDF
@@ -208,6 +209,7 @@ rajesh-exports-case-study/
 │   └── 05-glossary.md         <- every finance term, in plain English
 ├── tools/
 │   ├── build.py               <- turns memo.md into the final PDF
+│   ├── charts.py              <- draws the two charts in submission/figures/
 │   └── wordcount.py           <- checks both word limits under three counting conventions
 └── build/                     <- generated files (not tracked by git)
 ```
@@ -246,6 +248,14 @@ python tools/build.py Inferno_Mahi
 
 which writes `submission/Inferno_Mahi.pdf`.
 
+The memo has two charts (page 4). They are already saved in `submission/figures/`,
+so the build just embeds them. Only if you change the chart data, redraw them first
+(this one step needs `pip install matplotlib`):
+
+```bash
+python tools/charts.py
+```
+
 To check the word counts without rebuilding:
 
 ```bash
@@ -280,6 +290,7 @@ Current status:
 | Memo body word count | 2,464 at the strictest convention — inside 2,000–2,500, 36 words spare (2,493 even if the To/From header is counted) |
 | Justification word count | 486 at the strictest convention — inside the 500 cap, **14 words spare**; recheck after any edit |
 | All six required sections present | Yes |
+| Charts | Two, on page 4 — revenue vs Valcambi vs gold price, and revenue vs profit. They are images, so they add no words |
 | One option ticked in the recommendation box | Yes — Option D, with a visible tick |
 | Page 1 team details | **Placeholders — still to fill in** |
 | Filename | `Inferno_Mahi.pdf` — matches the required TeamName_TLsName pattern |
@@ -297,8 +308,9 @@ marking rewards reasoning from the evidence given.
 Two general reference figures come from outside the booklet, and the memo cites
 both: the FY21 and FY25 international gold price (about ₹70,000 per 10 grams in FY25 — LBMA
 Gold Price, converted at RBI reference rates) and calendar-2024 world gold supply (4,962
-tonnes — World Gold Council, Gold Demand Trends Full Year 2025). The memo also cites
-the Swiss Criminal Code (Articles 271 and 273) where it mentions Swiss blocking rules. They feed the tonnage
-estimate in Reason 3 and the price-versus-volume point in Reason 1. The domestic
+tonnes — World Gold Council, Gold Demand Trends Full Year 2025). They feed the tonnage
+estimate in Reason 3, the price-versus-volume point in Reason 1, and the gold-price
+line in Chart 1 (FY21–FY25 annual averages, approximate). The memo also cites the
+Swiss Criminal Code (Articles 271 and 273) where it mentions Swiss blocking rules. The domestic
 Indian price (around ₹80,000) is deliberately *not* used: it includes import duty
 and GST, which do not apply to revenue earned overseas.

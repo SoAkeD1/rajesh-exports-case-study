@@ -93,6 +93,19 @@ third. Gross-versus-net explains a gap in *level*; it cannot explain that fall.
 The monthly prices above are reconstructed from LBMA averages and RBI rates; treat
 them as approximate. The conclusion holds on either basis.
 
+Chart 1 in the memo draws this. The gold-price line uses these approximate
+fiscal-year averages (₹ per 10 g):
+
+| | FY21 | FY22 | FY23 | FY24 | FY25 |
+|---|---|---|---|---|---|
+| Gold price, ₹/10 g (approx.) | 43,500 | 43,550 | 46,630 | 52,950 | 70,300 |
+| Index, FY21 = 100 | 100 | 100 | 107 | 122 | 162 |
+| Attributed revenue index | 100 | 92 | 130 | 107 | 162 |
+| Valcambi audited index | 100 | 124 | 127 | 93 | 73 |
+
+FY22–FY24 are estimates built the same way as FY21 and FY25; spot-check them
+against RBI or LBMA data before relying on them in a question-and-answer session.
+
 ### Fact 2 — profit collapsed while revenue grew
 
 ```
@@ -113,7 +126,8 @@ mechanically — the same per-ounce spread becomes a smaller slice of a bigger n
 What price cannot explain is the fall in **rupee** profit. At a constant per-ounce
 spread, FY25 PAT should be roughly 1,432 × 0.83 (volume) × 1.05 (rupee) ≈
 ₹1,245 crore — and margin about 0.29%. The reported figures are ₹95 crore and
-0.02%. That gap is the robust fact, and it is what the memo leads with.
+0.02%. That gap is the robust fact, and it is what the memo leads with. Chart 2 in
+the memo shows it: revenue bars beside profit bars, on separate scales.
 
 The sharper version — comparing what we can inspect against what we cannot:
 

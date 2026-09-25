@@ -24,7 +24,7 @@ Three reasons:
 
 | Requirement | Notes |
 |---|---|
-| **Python 3** | Standard library only — nothing to `pip install`. |
+| **Python 3** | Standard library only for the build. Redrawing the charts (`tools/charts.py`) also needs `pip install matplotlib`. |
 | **Microsoft Edge** | Pre-installed on every Windows 11 machine. Used in headless mode purely as a PDF printer. |
 
 No LaTeX, no pandoc, no Word licence.
@@ -55,7 +55,7 @@ Checking word limits:
   justification               479    469    486     486   max 500   OK  (14 spare)
 
 Wrote build\memo.html
-Wrote submission\Inferno_Mahi.pdf  (142.6 KB)
+Wrote submission\Inferno_Mahi.pdf  (325.6 KB)
 ```
 
 ### Naming the file for submission
@@ -102,7 +102,9 @@ how a word is counted:
 The ceilings (2,500 and 500) are tested against the **highest** of the three and
 the floor (2,000) against the **lowest**, so a pass means a pass under any
 convention a marker might use. The cover page, the memo header, the
-recommendation table and the source note are excluded; section headings count.
+recommendation table, the source note and image lines are excluded; section
+headings count. A second check adds the To / From / Date / Subject header to the
+body and tests that against 2,500 too, in case a marker counts it.
 
 **Why this matters.** An earlier version reported only one convention and showed
 the justification at 491. Under K3 it was actually 503 — over the limit. Always
@@ -124,6 +126,7 @@ this memo uses:
 | `1.` and `-` lists | `<ol>`, `<ul>` (wrapped lines are joined) |
 | `---` | `<hr>` |
 | `<div class="pagebreak"></div>` | a forced page break |
+| `![alt](figures/x.png)` | the image, embedded in the HTML so the PDF is self-contained |
 | `☒` / `☐` | a filled / empty tick box |
 
 Consecutive lines that all look like `**Label:** value` are treated as a memo
@@ -133,6 +136,23 @@ paragraph. That is what keeps To / From / Date / Subject on four separate lines.
 The styling lives in the `CSS` string near the top of the file: A4 page, 19 mm
 top and bottom margins, Georgia at 10.5 pt, and a dark-gold accent on headings
 and table rules. Edit that string to change the look.
+
+### `tools/charts.py`
+
+Draws the memo's two figures with matplotlib and saves them to
+`submission/figures/`:
+
+| File | Placed after | Shows |
+|---|---|---|
+| `fig1-divergence.png` | Reason 1 | Attributed revenue, the rupee gold price and Valcambi's audited revenue, indexed to FY21 = 100 |
+| `fig2-profit.png` | Reason 2 | Consolidated revenue and profit after tax, side by side on separate scales |
+
+The figures are **images on purpose**: their titles and labels are pixels, not
+text, so they add nothing to the PDF's word count. The two colours (blue
+`#2a78d6`, orange `#eb6834`) pass a colour-blindness separation check, and the
+gold price is a grey dashed reference line. All company numbers come from
+Exhibits 5, 6 and 8; the gold prices are approximate annual averages (see
+[`03-the-analysis.md`](03-the-analysis.md)).
 
 ### The PDF step
 
