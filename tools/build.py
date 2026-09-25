@@ -11,6 +11,7 @@ Usage:
     python tools/build.py                      # -> submission/Inferno_Mahi.pdf
     python tools/build.py Inferno_MahiFullName   # override the default name
 """
+import base64
 import html
 import re
 import subprocess
@@ -53,6 +54,8 @@ hr { border: 0; border-top: 0.5pt solid #d8d3c4; margin: 13pt 0; }
 .box.checked::after { content: "✓"; color: #fff; font-size: 8pt;
        position: absolute; left: 1pt; top: -2pt; font-family: 'Segoe UI', sans-serif; }
 em.note { font-size: 8.5pt; color: #666; }
+figure { margin: 4pt 0 12pt 0; page-break-inside: avoid; }
+figure img { width: 100%; display: block; }
 """
 
 
@@ -96,6 +99,15 @@ def to_html(src):
         if s.startswith("#"):
             lvl = len(s) - len(s.lstrip("#"))
             out.append(f"<h{lvl}>{inline(s.lstrip('#').strip())}</h{lvl}>")
+            i += 1
+            continue
+
+        # figure: ![alt](figures/x.png), embedded so the PDF needs no external file
+        img = re.fullmatch(r"!\[([^\]]*)\]\(([^)]+)\)", s)
+        if img:
+            data = base64.b64encode((MEMO.parent / img.group(2)).read_bytes()).decode()
+            out.append(f"<figure><img src='data:image/png;base64,{data}' "
+                       f"alt='{html.escape(img.group(1), quote=True)}'></figure>")
             i += 1
             continue
 
@@ -145,7 +157,7 @@ def to_html(src):
         # paragraph
         para = []
         while i < len(lines) and lines[i].strip() and not re.match(
-                r"^\s*(#|\||-{3,}|\d+\.\s|[-*]\s|<div)", lines[i]):
+                r"^\s*(#|\||-{3,}|\d+\.\s|[-*]\s|<div|!\[)", lines[i]):
             para.append(lines[i].strip())
             i += 1
         if para:

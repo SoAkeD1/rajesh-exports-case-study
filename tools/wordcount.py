@@ -31,7 +31,7 @@ def render(text):
     text = re.sub(r"<div[^>]*></div>", " ", text)
     lines = []
     for line in text.split("\n"):
-        if line.strip() == "---":
+        if line.strip() == "---" or line.strip().startswith("!["):
             continue
         line = re.sub(r"^#+\s*", "", line).replace("**", "").replace("*", "")
         lines.append(line)
